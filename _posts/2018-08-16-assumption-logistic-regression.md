@@ -11,7 +11,7 @@ $$P(G = 1 \vert \boldsymbol{x}) = \frac{\exp(\boldsymbol{\beta \cdot x})}{1 + \e
 
 Consequently, it can be easily shown that the predicted value of the second class \\(G=0\\) occurring is also a sigmoid. The resulting values sum to 1 and fall between 0 and 1. Therefore, given the correct loss function, they can be interpreted as probabilities.
 
-To determine what \\(\boldsymbol{\beta \cdot x}\\) is regressing, invert (1). The sigmoid, \\(y = \frac{1}{1 + \exp(-x)}\\) is inverted by the logit function, \\(x = \log(\frac{y}{1-y})\\). The logit (or log-odds) of \\(p = P(G=k \vert \boldsymbol{x})\\), then, can be written as follows:
+To determine what $$\boldsymbol{\beta \cdot x}$$ is regressing, invert (1). The sigmoid, \\(y = \frac{1}{1 + \exp(-x)}\\) is inverted by the logit function, \\(x = \log(\frac{y}{1-y})\\). The logit (or log-odds) of \\(p = P(G=k \vert \boldsymbol{x})\\), then, can be written as follows:
 
 $$\begin{aligned} \text{logit}(p) &= \log\left(\frac{p}{1-p}\right) \\ &= \boldsymbol{ \beta \cdot x }. \end{aligned}$$
 
@@ -34,7 +34,7 @@ but with different coefficients \\(\beta_k\\). For two classes \\(g_1\\) and \\(
 $$p_{g_1}/p_{g_2} \sim \boldsymbol{x}. \ \ \ (2)$$
 
 <div style="padding: 10px; background-color: #ccc; font-size: 1.3em;">
-Therefore, logistic regression assumes that the ratios between probabilities of different categorical outcomes scale linearly with \\(\boldsymbol{x}\\). Any feature engineering then, should reflect your belief about how these are related.
+Therefore, logistic regression assumes that the ratios between probabilities of different categorical outcomes scale linearly with $\boldsymbol{x}$. Any feature engineering then, should reflect your belief about how these are related.
 </div>
 
 # A brief comment on the loss function

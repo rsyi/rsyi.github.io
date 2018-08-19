@@ -1,9 +1,9 @@
 ---
 layout: post
-title: The assumption behind logistic regression
+title: The assumptions behind logistic regression
 ---
 
-Logistic regression is an adaptation of linear regression used to predict categorical outcomes. But the linearity is not directly apparent, and generally left undiscussed. In using logistic regression, we are actually assuming that the ratio between any two probabilities scales linearly with the features. I’ll briefly lay out why this is the case.
+Logistic regression is an adaptation of linear regression used to predict categorical outcomes. But the linearity is not directly apparent, and generally left undiscussed. In using logistic regression, we are actually assuming that *the ratio between any two probabilities scales linearly with the features*. I’ll briefly lay out why this is the case.
 
 In the two-class case (for simplicity), the predicted value of an outcome \\(G=1\\) occurring is assumed sigmoidal:
 
@@ -33,9 +33,9 @@ but with different coefficients \\(\beta_k\\). For two classes \\(g_1\\) and \\(
 
 $$p_{g_1}/p_{g_2} \sim \boldsymbol{x}. \ \ \ (2)$$
 
-Therefore, logistic regression assumes that the ratios between probabilities of different categorical outcomes scale linearly with \\(\boldsymbol{x}\\). Any feature engineering then, should reflect your belief about how these are related.
+### Therefore, logistic regression assumes that the ratios between probabilities of different categorical outcomes scale linearly with \\(\boldsymbol{x}\\). Any feature engineering then, should reflect your belief about how these are related.
 
-A brief comment on the loss function
+# A brief comment on the loss function
 
 Recently, the similarity of logistic to linear regression caused me to erroneously suggest that the analytical solution to logistic regression could be solved through matrix inversion (i.e. the \\(\beta = (X^T X)^{-1} X^T y\\) solution of linear regression). But this is not the case!
 

@@ -11,7 +11,7 @@ $$P(G = 1 | \boldsymbol{x}) = \frac{\exp(\boldsymbol{\beta \cdot x})}{1 + \exp(\
 
 Consequently, it can be easily shown that the predicted value of the second class \\(G=0\\) occurring is also a sigmoid. The resulting values sum to 1 and fall between 0 and 1. Therefore, given the correct loss function, they can be interpreted as probabilities.
 
-To determine what \\(\boldsymbol{\beta \cdot x}\\) is regressing, invert (1). The sigmoid, \\(y = \frac{1}{1 + \exp(-x)}\\) is inverted by the logit function, \\(x = \log(\frac{y}{1-y})\\). The logit (or log-odds) of \\(p = P(G=k | X)\\), then, can be written as follows:
+To determine what \\(\boldsymbol{\beta \cdot x}\\) is regressing, invert (1). The sigmoid, \\(y = \frac{1}{1 + \exp(-x)}\\) is inverted by the logit function, \\(x = \log(\frac{y}{1-y})\\). The logit (or log-odds) of \\(p = P(G=k | \boldsymbol{x})\\), then, can be written as follows:
 
 $$\begin{aligned} \text{logit}(p) &= \log\left(\frac{p}{1-p}\right) \\ &= \boldsymbol{ \beta \cdot x }. \end{aligned}$$
 

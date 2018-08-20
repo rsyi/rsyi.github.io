@@ -32,8 +32,8 @@ $$P(G=k \vert \boldsymbol{x}) = \frac{\exp(\boldsymbol{\beta_k \cdot x})}{\sum_{
 
 but with different coefficients \\(\beta_k\\). For two classes \\(g_1\\) and \\(g_2\\), we can thus state our assumption more generally:
 
-$$p_{g_1}/p_{g_2} \sim \boldsymbol{x}. \ \ \ (2)$$
+$$\log \left( p_{g_1}/p_{g_2} \right) \sim \boldsymbol{x}. \ \ \ (2)$$
 
 <div style="padding: 10px; background-color: #ccc; font-size: 1.3em;">
-Therefore, logistic regression assumes that the ratios between probabilities of different categorical outcomes scale linearly with $\boldsymbol{x}$. Any feature engineering then, should reflect your belief about how these are related.
+Therefore, logistic regression assumes that the log of the ratios between probabilities of different categorical outcomes scale linearly with $\boldsymbol{x}$. Any feature engineering then, should reflect your belief about how these are related.
 </div>

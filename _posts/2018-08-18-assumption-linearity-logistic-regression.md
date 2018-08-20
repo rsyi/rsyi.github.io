@@ -1,7 +1,7 @@
 ---
 layout: post
 title: The assumption of linearity behind logistic regression
-tags: machine-learning, logistic-regression, generalized-linear-models, log-loss, classification
+tags: machine-learning generalized-linear-models
 ---
 
 Logistic regression is an adaptation of linear regression used to predict categorical outcomes. But the linearity is not directly apparent, and generally left undiscussed. In using logistic regression, we are actually assuming that **the ratio between any two probabilities scales linearly with the features**. I’ll briefly lay out why this is the case.

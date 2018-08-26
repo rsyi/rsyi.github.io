@@ -19,7 +19,7 @@ Note that I divide the resulting sum by the number of elements summed. If the ce
 
 Below is the convergence of uniform distribution between 0 and 1. Note that an unbounded uniform distribution is a trivial example of a distribution with an infinite variance for which no convergence would occur.
 
-<img src="../images/2018-08-24-central-limit-theorem/uniform.png">
+<img src="../images/2018-08-26-central-limit-theorem/uniform.png">
 
 ## Beta distribution
 The beta distribution is a normalized version of:
@@ -28,18 +28,18 @@ $$P(x) \sim x^{\alpha-1} (1-x)^{\beta -1}$$
 
 Because it's only defined between 0 and 1, it certainly satisfies the condition that the second moment is finite.
 
-<img src="../images/2018-08-24-central-limit-theorem/beta.png">
+<img src="../images/2018-08-26-central-limit-theorem/beta.png">
 
 ## Log-normal distribution
 Curiously, this theorem also works for the log-normal distribution:
 
 $$P(x) \sim \frac{1}{x} e^{- (\ln x - \mu)^2 / 2 \sigma^2}$$
 
-<img src="../images/2018-08-24-central-limit-theorem/lognormal.png">
+<img src="../images/2018-08-26-central-limit-theorem/lognormal.png">
 
 It takes a bit longer for the convergence to occur, so let's try log-spacing the number of samples to average.
 
-<img src="../images/2018-08-24-central-limit-theorem/lognormal_log.png">
+<img src="../images/2018-08-26-central-limit-theorem/lognormal_log.png">
 
 Because there are so many distributions that are log-normal, the central limit applied here has some strong practical ramifications that I had not before considered. For example, if price distributions tend to be log-normal, then a revenue distribution for which multiple orders are placed could perhaps be more accurately described as one of these in-between shapes.
 
@@ -54,11 +54,11 @@ $$P(x) \sim \frac{1}{(1+x)^{\alpha+1}}$$
 
 For $\alpha = 2$, for which the variance is finite, the normal distribution appears.
 
-<img src="../images/2018-08-24-central-limit-theorem/pareto2.png">
+<img src="../images/2018-08-26-central-limit-theorem/pareto2.png">
 
 However, for $\alpha =1$, for which the variance is infinite, the curves flatten and widen. Note these are normalized, so the decreasing height of the peak indicates spreading.
 
-<img src="../images/2018-08-24-central-limit-theorem/pareto1.png">
+<img src="../images/2018-08-26-central-limit-theorem/pareto1.png">
 
 While this empirical test does seem to indicate that no convergence to a normal distribution occurs, as expected, I still wonder if this converges to something else? It's starting to look awfully log-normal.
 

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Central limit theorem visualizations
+title: Central limit theorem convergence visualizations
 tags: statistics
 ---
 
@@ -60,13 +60,15 @@ However, for $\alpha =1$, for which the variance is infinite, the curves flatten
 
 <img src="../images/2018-08-26-central-limit-theorem/pareto1.png">
 
-While this empirical test does seem to indicate that no convergence to a normal distribution occurs, as expected, I still wonder if this converges to something else? It's starting to look awfully log-normal.
+While this empirical test does seem to indicate that no convergence to a normal distribution occurs, as expected, it does still supposedly converge to what is called an [alpha-stable distribution](https://en.wikipedia.org/wiki/Central_limit_theorem), though I do not know what this is yet.
 
 ## Final notes
-I still have some lingering thoughts. First, let $N$ be the number of variables summed. If the distribution eventually approaches a true normal distribution, with enough summing and sampling, values far from the mean must be observed. Therefore, for any bounded distribution, I suspect that the **variance must approach $0$ as $N\to \infty$**.
+I still have some lingering thoughts. First, let $N$ be the number of variables summed. If the distribution eventually approaches a true normal distribution, with enough sampling and averaging, values far from the mean must be observed. Therefore, for any bounded distribution, I suspect that the **variance must approach $0$ as $N\to \infty$**.
+
+Also, note that [the density of the sum of two independent real-valued random variables equals the convolution of the density functions of the original variables](https://en.wikipedia.org/w/index.php?title=Illustration_of_the_central_limit_theorem&gettingStartedReturn=true). We could therefore recreate these graphs analytically.
 
 A couple remaining open questions:
 
 * **How does the peak of the pdf change with $N$?** <br> This peak increases in height as the distribution narrows as mentioned above, but for the log-normal case it decreases before it increases.
-* **Why does the power law appear to converge slower than the other distributions?** <br> There appears to be some relation to relaxation methods (how boundary conditions add in a persistent effect after each iteration), but to really understand this, I need to do the math.
+* **Why does the power law appear to converge slower than the other distributions?** <br> Explicitly, the question amounts to: how does changing the functional form of a convolving function affect the convergence of a series of such convolutions to the convergent distribution?
 

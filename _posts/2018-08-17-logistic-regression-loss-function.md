@@ -8,7 +8,7 @@ Recently, the similarity of logistic to linear regression caused me to erroneous
 
 Note that if we were to directly follow the linear regression prescription, we would have to define a loss between \\(\boldsymbol{\beta \cdot x}\\) and the quantity that we are trying to regress. In this case, that would mean
 
-$$\text{RSS} = \sum_{i=0}^{K-1}  \left( \log(\frac{p_k}{p_K}) - \boldsymbol{\beta \cdot x} \right)^2 $$
+$$\text{RSS} = \sum_{i=0}^{K-1}  \left( \log \left(\frac{p_k}{p_K} \right) - \boldsymbol{\beta \cdot x} \right)^2 $$
 
 where \\(p_k = P(G = k \vert \boldsymbol{x})\\) (for a more explicit overview of the above, see [The assumption of linearity behind logistic regression]({% post_url 2018-08-18-assumption-linearity-logistic-regression %})). Since we do not have the true value of any \\(p_k\\), but simply what is observed, the above quantity makes no sense. Or, if we took the observed value, this quantity would be $\pm \infty$. Instead, we want a metric that penalizes an incorrect prediction and values a correct one. What is traditionally used is the log loss function:
 

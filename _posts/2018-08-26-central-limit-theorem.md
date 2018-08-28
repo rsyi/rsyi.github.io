@@ -63,9 +63,7 @@ However, for $\alpha =1$, for which the variance is infinite, the curves flatten
 While this empirical test does seem to indicate that no convergence to a normal distribution occurs, as expected, it does still supposedly converge to what is called an [alpha-stable distribution](https://en.wikipedia.org/wiki/Central_limit_theorem), though I do not know what this is yet.
 
 ## Final notes
-I still have some lingering thoughts. First, let $N$ be the number of variables summed. If the distribution eventually approaches a true normal distribution, with enough sampling and averaging, values far from the mean must be observed. Therefore, for any bounded distribution, I suspect that the **variance must approach $0$ as $N\to \infty$**.
-
-Also, note that [the density of the sum of two independent real-valued random variables equals the convolution of the density functions of the original variables](https://en.wikipedia.org/w/index.php?title=Illustration_of_the_central_limit_theorem&gettingStartedReturn=true). We could therefore recreate these graphs analytically.
+Note that [the density of the sum of two independent real-valued random variables equals the convolution of the density functions of the original variables](https://en.wikipedia.org/w/index.php?title=Illustration_of_the_central_limit_theorem&gettingStartedReturn=true). We could therefore recreate these graphs analytically.
 
 A couple remaining open questions:
 

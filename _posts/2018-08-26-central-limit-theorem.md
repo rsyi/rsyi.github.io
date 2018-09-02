@@ -4,6 +4,8 @@ title: Central limit theorem
 tags: statistics
 ---
 
+I am no statistician! But the central limit theorem has interested me recently, so please humor me as I share some roughly sketched ideas.  
+
 The central limit theorem states that, given a parent distribution of mean $\mu$ and variance $\sigma^2$, if you independently draw $k$ samples from this parent distribution, average them to get one value, then repeat this process over and over, the resulting distribution formed by these values will approach a normal distribution of mean $\mu$ and variance $\sigma^2/k$ as $k \to \infty$.
 
 Because I have always had poor intuition for this theorem, below I'll discuss (with very simple examples) how this convergence to normality occurs for different parent distributions, along with some illustrations.
@@ -86,5 +88,5 @@ Note that [the density of the sum of two independent real-valued random variable
 A couple remaining open questions:
 
 * **How does the peak of the pdf change with $N$?** <br> This peak increases in height as the distribution narrows as mentioned above, but for the log-normal case it decreases before it increases.
-* **Why does the power law appear to converge slower than the other distributions?** <br> Explicitly, the question amounts to: how does changing the functional form of a convolving function affect the convergence of a series of such convolutions to the convergent distribution?
+* **Why does the power law appear to converge slower than the other distributions?** <br> Explicitly, the question amounts to: how does changing the functional form of a convolving function affect the convergence of a series of such convolutions to the convergent distribution? A simple way to solve this would be to check the Kolmogorov-Smirnov distance between the the converging distribution and the normal distribution (note: the [Berry-Esseen theorem](https://en.wikipedia.org/wiki/Berry%E2%80%93Esseen_theorem) appears to do just that!), but perhaps there exists a more elegant way to do this, while also answering the first question above...
 

@@ -17,7 +17,7 @@ The most curious feature is the kinked line that occurs when $k=2$. The function
 
 $$P(u = x + y) = \int_{-\infty}^{\infty} P(x) P(u - x) \ dx$$
 
-(note this is a convolution -- for a fantastic, more thorough expalanation of the above equation, see [Understanding Convolutions](http://colah.github.io/posts/2014-07-Understanding-Convolutions/) by Christopher Olah). $P(x) = 1$, so the integrals should be quite simple. The only trick here is to solve for the piecewise behavior... $P(u - x)$ is only $1$ where $0 \leq u - x \leq 1$, or in other words, where $ -1 +u \leq x \leq u $, and $P(x)$ is only $1$ when $0 \leq x \leq 1$. Therefore, between $0 \leq u \leq 1$, we have
+(note this is a convolution -- for a fantastic, more thorough explanation of the above equation, see [Understanding Convolutions](http://colah.github.io/posts/2014-07-Understanding-Convolutions/) by Christopher Olah). $P(x) = 1$, so the integrals should be quite simple. The only trick here is to solve for the piecewise behavior... $P(u - x)$ is only $1$ where $0 \leq u - x \leq 1$, or in other words, where $ -1 +u \leq x \leq u $, and $P(x)$ is only $1$ when $0 \leq x \leq 1$. Therefore, between $0 \leq u \leq 1$, we have
 
 $$P(u) = \int_{0}^{u} dx = u$$ 
 

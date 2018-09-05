@@ -4,8 +4,6 @@ title: Central limit theorem
 tags: statistics
 ---
 
-I am no statistician! But the central limit theorem has interested me recently, so please humor me as I share some roughly sketched ideas.  
-
 The central limit theorem states that, given a parent distribution of mean $\mu$ and variance $\sigma^2$, if you independently draw $k$ samples from this parent distribution, average them to get one value, then repeat this process over and over, the resulting distribution formed by these values will approach a normal distribution of mean $\mu$ and variance $\sigma^2/k$ as $k \to \infty$.
 
 Because I have always had poor intuition for this theorem, below I'll discuss (with very simple examples) how this convergence to normality occurs for different parent distributions, along with some illustrations.

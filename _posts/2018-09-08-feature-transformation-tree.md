@@ -53,7 +53,7 @@ If we try to predict the y-value with by using a decision tree regressor with fe
 
 ![](../images/2018-09-08-feature-transformation-tree/reg_surface.png)
 
-... and a tree that is so horrendously complex that I cannot post it here. But note there's a symmetry in the data which we can explote. The decision boundaries appear to be concentric circles around $(x_1, x_2) = (0.5, 0.5)$ (in fact, that's exactly what they are, with some added noise). Let's therefore create a new feature $x = (x_1-0.5)^2 + (x_2-0.5)^2$ and use it as the only feature in our regression.
+... and a tree that is incredibly complex. But note there's a symmetry in the data which we can exploit. The decision boundaries appear to be concentric circles around $(x_1, x_2) = (0.5, 0.5)$ (in fact, that's exactly what they are, with some added noise). Let's therefore create a new feature $x = (x_1-0.5)^2 + (x_2-0.5)^2$ and use it as the only feature in our regression.
 
 ![](../images/2018-09-08-feature-transformation-tree/reg_surface_squared.png)
 

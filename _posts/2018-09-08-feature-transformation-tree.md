@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Feature transformations for tree-based methods
-tags: statistics
+tags: machine-learning feature-engineering
 ---
 
 Tree-based methods are fantastic at finding nonlinear boundaries, particularly when used in ensemble or within boosting schemes. However, there's a lot to be learned about the humble lone decision tree that is generally overlooked (read: I overlooked these things when I first began my machine learning journey). In what follows I will briefly discuss how transformations of your data can vastly improve the ability of single trees to capture nonlinearities. If you are not yet familiar with decision trees, [Elements of Statistical Learning](https://web.stanford.edu/~hastie/ElemStatLearn/) has a wonderful overview.

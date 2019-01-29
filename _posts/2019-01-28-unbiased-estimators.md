@@ -4,7 +4,7 @@ title: An introduction to unbiased [and doubly robust] estimators
 tags: machine-learning causal-inference
 ---
 
-Often, data collection cannot be completely random -- e.g. in clinical trials, where it would be unethical to randomly treat with some medicine, or in online surveys, where response cannot be guaranteed. In such cases, data can be biased, so any inferences drawn or machine learning models built from this data will not generalize well to the overall population. This is where **unbiased estimation** can come in, in which small adjustments are effectively made to the dataset to make it more representative of a random sample.
+Often, data collection cannot be completely random -- e.g. in clinical trials, where it would be unethical to randomly treat people with medicine, or in online surveys, where response cannot be guaranteed. In such cases, data can be biased, so any inferences drawn or machine learning models built from this data will not generalize well to the overall population. This is where **unbiased estimation** can come in, in which small adjustments are effectively made to the dataset to make it more representative of a random sample.
 
 This post will introduce a couple kinds of unbiased estimation (1. inverse probability of treatment weighting and 2. outcome modeling) towards the ultimate goal of introducing the doubly robust estimator, which combines both of these things, but can be a little confusing.
 

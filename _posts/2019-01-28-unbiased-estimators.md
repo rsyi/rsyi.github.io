@@ -1,12 +1,16 @@
 ---
 layout: post
-title: Unbiased [and doubly robust] estimators
+title: An introduction to unbiased [and doubly robust] estimators
 tags: machine-learning causal-inference
 ---
 
+Often, data collection cannot be completely random -- e.g. in clinical trials, where it would be unethical to randomly treat with some medicine, or in online surveys, where response cannot be guaranteed. In such cases, data can be biased, so any inferences drawn or machine learning models built from this data will not generalize well to the overall population. This is where **unbiased estimation** can come in, in which small adjustments are effectively made to the dataset to make it more representative of a random sample.
+
+This post will introduce a couple kinds of unbiased estimation (1. inverse probability of treatment weighting and 2. outcome modeling) towards the ultimate goal of introducing the doubly robust estimator, which combines both of these things, but can be a little confusing.
+
 ## An introduction to bias, by way of example
 
-Say I want to know how All People (defined as all people, all over the world) would answer the following question:
+First, let's discuss bias with an example to make the concept more tangible. Say I want to know how All People (defined as all people, all over the world) would answer the following question:
 
 > **Is Robert the best?**
 
@@ -84,7 +88,7 @@ We can actually repeat the doubly robust process recursively. To do this, $\hat{
 
 $$\hat{Y}_{\text{RR}, 2} = \frac{A\left(Y - \left(\frac{A(Y - M(X))}{\pi_1} + M(X)\right)\right)}{\pi_2}  + \left(\frac{A(Y - M(X))}{\pi_1} + M(X)\right) $$
 
-Written out, it quickly becomes horrendous, but if you go through the work of checking it, you might notice that we now get two chances to attempt the IPTW model ($\pi_1$ and $\pi_2$), and if either is correct in expectation, $\hat{Y}_{\text{RR},2}$ should be unbiased. This can be repeated forever! Unfortunately, in practice, this is probably unnecessary -- the main plight of 
+Written out, it quickly becomes horrendous, but if you go through the work of checking it, you might notice that we now get two chances to attempt the IPTW model ($\pi_1$ and $\pi_2$), and if either is correct in expectation, $\hat{Y}_{\text{RR},2}$ should be unbiased. This can be repeated forever! Unfortunately, in practice, nesting models like this may not be that useful. The primary reason why constructing a perfect model $\pi$ is difficult is because there are often *unobserved* confounding variables, and no number of nested models will address this.
 
 
 ## Final comments
